@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С днем рождения Алексей!</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #ff6347,#ffff, #ff6347);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff6347;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>С днём рождения, Мой друг Алексей!</h1>
+        <p>Сегодня день особый, светлый, ясный, <br>Твой день, Алексей, он для нас прекрасный. <br>Поздравляем дружно, с улыбкой и теплом, <br>Пусть счастье и удача в твой придут дом.<br><br>Желаем, чтоб мечты твои сбывались, <br>Все цели, планы в жизни воплощались.<br> Здоровья крепкого, успехов, радости,<br> Чтоб все дни твои были в сладости.<br><br>Друзья с тобой, поддержат в трудный час,<br> С тобой мы отмечаем праздник в этот раз. <br>Ты добрый, верный друг, и пусть всегда<br> Твоя душа сияет, как звезда.<br><br>Пусть в жизни будет всё легко и гладко, <br>Пусть каждый день приносит радость сладко.<br> С днём рождения, Алексей, наш друг,<br> Пусть счастье окружает крепкий круг!</p>
+        <button id="playButton">Play Music</button>
+        <audio id="audio" src="s-dnem-rozhdeniya-brat-aleksey.mp3"></audio>
+    </div>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+                this.textContent = 'Pause Music';
+            } else {
+                audio.pause();
+                this.textContent = 'Play Music';
+            }
+        });
+    </script>
+</body>
+</html>
